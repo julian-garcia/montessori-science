@@ -2,15 +2,28 @@
   "name": "montessori-science",
   "version": "1.0.0",
   "description": "Montessori Science",
-  "main": "index.js",
+  "private": "true",
+  "source": [
+    "src/style/main.scss"
+  ],
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "wp-env": "wp-env",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "npm run wp-env start",
+    "stop": "npm run wp-env stop",
+    "start": "rm -rf dist && npm run format && parcel watch",
+    "build": "rm -rf dist && npm run format && parcel build",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "Julian Garcia",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/env": "^4.8.0"
+    "@parcel/transformer-sass": "^2.6.0",
+    "@wordpress/env": "^4.8.0",
+    "parcel": "^2.6.0",
+    "postcss": "^8.4.14",
+    "prettier": "2.6.2",
+    "tailwindcss": "^3.0.24"
   }
 }
