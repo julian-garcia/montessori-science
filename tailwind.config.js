@@ -7,6 +7,7 @@ module.exports = {
       "bright-red": "#FF3333",
       orange: "#FF9900",
       gold: "#AD8744",
+      "light-green": "#E0F5D6",
       "bright-green": "#66CC33",
       "lighter-blue": "#33CCff",
       "darker-blue": "#336699",
@@ -20,4 +21,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  safelist: ["container", "mx-auto"],
 };

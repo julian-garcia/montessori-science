@@ -11,8 +11,8 @@
     "wp-env": "wp-env",
     "serve": "npm run wp-env start",
     "stop": "npm run wp-env stop",
-    "start": "rm -rf dist && npm run format && parcel watch",
-    "build": "rm -rf dist && npm run format && parcel build",
+    "start": "rm -rf dist && parcel watch",
+    "build": "rm -rf dist && npm run format && parcel build && node package-theme.js",
     "format": "prettier --write ."
   },
   "keywords": [],
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "@wordpress/env": "^4.8.0",
+    "archiver": "^5.3.1",
     "parcel": "^2.6.0",
     "postcss": "^8.4.14",
     "prettier": "2.6.2",
