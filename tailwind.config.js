@@ -25,10 +25,20 @@ module.exports = {
         10: "10px",
       },
       minHeight: {
+        20: "5rem",
         36: "9rem",
       },
       maxWidth: {
-        full: "1200px",
+        wide: "1200px",
+      },
+      screens: {
+        xs: "480px",
+        sm: "600px",
+        md: "782px",
+        lg: "960px",
+        xl: "1080px",
+        "2xl": "1280px",
+        "3xl": "1440px",
       },
     },
   },

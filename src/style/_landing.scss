@@ -1,57 +1,79 @@
-.page-template.page .landing-page {
-  @apply mx-auto max-w-full mt-0 mb-12;
-
-  .wp-block-columns {
-    gap: 0;
-
-    .wp-block-column:first-child {
-      @apply border-r-orange border-r-10;
-    }
-
-    .wp-block-column:nth-child(2) {
-      @apply pl-12 py-0;
-    }
+.page-template-landing.page {
+  .container {
+    @apply max-w-full md:max-w-wide;
   }
 
-  .landing-contact {
-    .wp-block-cover {
-      @apply h-full;
-    }
+  .hide-small {
+    @apply hidden md:block;
   }
 
-  .landing-mission {
-    @apply border-t-lighter-blue border-t-10;
-    .wp-block-column {
-      @apply py-12;
-      &:first-child {
-        > * {
-          @apply pr-12;
-        }
+  .show-small {
+    @apply block md:hidden;
+  }
+
+  .landing-page {
+    @apply mx-auto max-w-wide mt-0 mb-12 px-0 md:px-4;
+
+    .wp-block-columns {
+      gap: 0;
+
+      .wp-block-column:first-child {
+        @apply border-r-orange md:border-r-10;
       }
-      &:nth-child(2) {
-        > *:first-child {
-          @apply pl-0 pt-12;
+
+      .wp-block-column:nth-child(2) {
+        @apply pl-4 py-0 pr-4 md:pr-0;
+
+        @screen xl {
+          @apply pl-12;
         }
       }
     }
-  }
 
-  .site-logo {
-    max-width: 312px;
-    @apply absolute top-4 right-16;
-    background: radial-gradient(
-      48.61% 29.33% at 45.5% 57.67%,
-      rgba(0, 0, 0, 0.5) 61.46%,
-      rgba(0, 0, 0, 0) 100%
-    );
-  }
+    .landing-contact {
+      .wp-block-column:first-child {
+        @apply border-b-lighter-blue border-b-10 md:border-b-0;
+      }
+      .wp-block-cover {
+        min-height: 250px;
+        @apply md:h-full md:min-h-max;
+      }
+    }
 
-  .address {
-    @apply text-base mb-0;
-  }
+    .landing-mission {
+      @apply border-t-lighter-blue border-t-10;
+      .wp-block-column {
+        @apply py-12;
+        &:first-child {
+          > * {
+            @apply pr-12;
+          }
+        }
+        &:nth-child(2) {
+          > *:first-child {
+            @apply pl-0 pt-12;
+          }
+        }
+      }
+    }
 
-  .social {
-    @apply bg-orange text-white mb-5 border-2 border-orange hover:border-dark-gray;
+    .site-logo {
+      max-width: 312px;
+      @apply absolute top-4 right-16;
+      background: radial-gradient(
+        48.61% 29.33% at 45.5% 57.67%,
+        rgba(0, 0, 0, 0.5) 61.46%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+
+    .address {
+      @apply text-base mb-0;
+    }
+
+    .social {
+      @apply bg-orange text-white mb-5 border-2 border-orange hover:border-dark-gray;
+    }
   }
 }
 
@@ -64,7 +86,7 @@
   }
 
   textarea {
-    @apply h-36 max-h-36 min-h-36;
+    @apply h-36 max-h-32 min-h-20 sm:max-h-20 sm:min-h-20 md:max-h-36 md:min-h-36;
   }
 
   label {
