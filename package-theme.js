@@ -10,6 +10,8 @@ archive.pipe(output);
 archive.glob("*.php");
 archive.glob("*.png");
 archive.glob("*.css");
+archive.file("theme.json");
+archive.file("README.md");
 archive.directory("dist");
 archive.directory("templates");
 archive.directory("parts");

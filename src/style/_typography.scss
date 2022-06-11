@@ -1,0 +1,12 @@
+body {
+  @apply font-sans;
+}
+
+.page-template.page {
+  h2 {
+    @apply text-xl mb-4 font-bold;
+  }
+  h3 {
+    @apply text-lg mb-4 font-normal;
+  }
+}

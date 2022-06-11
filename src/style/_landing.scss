@@ -1,52 +1,90 @@
-.landing-image {
-  border-top-right-radius: 60px;
-  max-width: 1100px;
-  @apply border-bright-green border-8 relative;
+.page-template.page .landing-page {
+  @apply mx-auto max-w-full mt-0 mb-12;
 
-  img {
-    border-top-right-radius: 52px !important;
+  .wp-block-columns {
+    gap: 0;
+
+    .wp-block-column:first-child {
+      @apply border-r-orange border-r-10;
+    }
+
+    .wp-block-column:nth-child(2) {
+      @apply pl-12 py-0;
+    }
   }
-}
 
-.landing-headline {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  @apply absolute right-0 bottom-0 bg-opacity-70 text-xl bg-bright-green border-bright-green border-8 font-semibold px-12 pt-20 text-left;
+  .landing-contact {
+    .wp-block-cover {
+      @apply h-full;
+    }
+  }
+
+  .landing-mission {
+    @apply border-t-lighter-blue border-t-10;
+    .wp-block-column {
+      @apply py-12;
+      &:first-child {
+        > * {
+          @apply pr-12;
+        }
+      }
+      &:nth-child(2) {
+        > *:first-child {
+          @apply pl-0 pt-12;
+        }
+      }
+    }
+  }
+
+  .site-logo {
+    max-width: 312px;
+    @apply absolute top-4 right-16;
+    background: radial-gradient(
+      48.61% 29.33% at 45.5% 57.67%,
+      rgba(0, 0, 0, 0.5) 61.46%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .address {
+    @apply text-base mb-0;
+  }
+
+  .social {
+    @apply bg-orange text-white mb-5 border-2 border-orange hover:border-dark-gray;
+  }
 }
 
 .contact-form {
-  @apply relative;
-  @screen md {
-    @apply absolute top-52 left-32;
-  }
-
-  label {
-    border-width: 8px 3px 4px 8px;
-    border-radius: 0px 58px 0px 20px;
-    @apply block bg-light-green bg-opacity-95 border-bright-green p-4;
-  }
-
-  form > p:nth-of-type(1) {
-    @apply relative z-20;
-    label {
-      @apply pb-4;
-    }
-  }
-
-  form > p:nth-of-type(2) {
-    @apply -mt-12 relative z-10;
-    label {
-      @apply pt-12;
-    }
-  }
+  @apply pb-6 text-lg;
 
   input[type="email"],
   textarea {
-    @apply py-4 px-4 w-full mt-4;
+    @apply py-4 px-4 mt-4 w-full border-3 border-cold-gray focus:border-orange focus:outline-none;
   }
 
   textarea {
-    @apply h-32 w-full mb-10;
+    @apply h-36 max-h-36 min-h-36;
+  }
+
+  label {
+    @apply block mb-4;
+  }
+
+  form > p {
+    @apply last-of-type:-mt-6;
+  }
+
+  input[type="submit"] {
+    transition: all 0.4s ease-in-out;
+    @apply bg-cold-gray text-white px-4 py-2 font-bold cursor-pointer w-full hover:bg-orange;
+  }
+
+  .wpcf7-not-valid-tip {
+    @apply absolute bottom-1 left-4 text-bright-red;
+  }
+
+  .wpcf7-response-output {
+    @apply hidden;
   }
 }

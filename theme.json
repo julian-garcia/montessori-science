@@ -19,7 +19,7 @@
       ]
     },
     "spacing": {
-      "units": []
+      "units": ["px", "em", "rem", "vh", "vw", "%"]
     },
     "layout": {
       "contentSize": "",
@@ -85,8 +85,8 @@
   ],
   "customTemplates": [
     {
-      "name": "",
-      "title": "",
+      "name": "landing",
+      "title": "Landing",
       "postTypes": ["post", "page"]
     }
   ]

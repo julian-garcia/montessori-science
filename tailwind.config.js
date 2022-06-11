@@ -2,6 +2,7 @@ module.exports = {
   content: ["./templates/**/*.{html,php}", "./parts/**/*.{html,php}"],
   theme: {
     colors: {
+      white: "#FFFFFF",
       "egg-plant": "#CC3399",
       "warm-pink": "#FF6699",
       "bright-red": "#FF3333",
@@ -18,7 +19,18 @@ module.exports = {
       sans: ["Montserrat", "sans-serif"],
       serif: ["serif"],
     },
-    extend: {},
+    extend: {
+      borderWidth: {
+        3: "3px",
+        10: "10px",
+      },
+      minHeight: {
+        36: "9rem",
+      },
+      maxWidth: {
+        full: "1200px",
+      },
+    },
   },
   plugins: [],
   safelist: ["container", "mx-auto"],
