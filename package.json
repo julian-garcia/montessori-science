@@ -12,7 +12,7 @@
     "serve": "npm run wp-env start",
     "stop": "npm run wp-env stop",
     "start": "rm -rf dist && parcel watch",
-    "build": "rm -rf dist && npm run format && parcel build && node package-theme.js",
+    "build": "rm -rf .parcel-cache && rm -rf dist && npm run format && parcel build && node package-theme.js",
     "format": "prettier --write ."
   },
   "keywords": [],

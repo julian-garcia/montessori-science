@@ -31,6 +31,8 @@
     }
 
     .landing-contact {
+      @apply mb-0;
+
       .wp-block-column:first-child {
         @apply border-b-lighter-blue border-b-10 md:border-b-0;
       }
